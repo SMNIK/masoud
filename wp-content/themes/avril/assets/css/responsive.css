@@ -490,6 +490,11 @@
         height: 32px;
         line-height: 1.65;
     }
+	
+	table {
+        overflow-x: auto;
+        display: flex;
+    }
 }
 
 @media only screen and (max-width: 343px) {
