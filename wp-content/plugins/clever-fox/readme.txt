@@ -4,7 +4,7 @@ Tags: homepage, companion, demo, sections, customizer, widget, settings
 Requires at least: 4.0
 Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 12.6
+Stable tag: 12.8
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -130,6 +130,12 @@ Clever Fox WordPress plugin is licensed under the GPL3 (https://www.gnu.org/lice
 
 
 == Changelog ==
+
+= 12.8 =
+* Avitech Theme Files Added
+
+= 12.7 =
+* Fixed Escaping Issue in Techine Theme
 
 = 12.6 =
 * Fixed Sainitization Issue in Conceptly Theme

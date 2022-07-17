@@ -154,10 +154,24 @@ add_action( 'customize_register', 'arilesuper_aasta_frontpage_sections_settings'
 function arilesuper_aasta_customizer_selective_refresh_settings($wp_customize) {
 	
 	$selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';	
-
+	
+	$activate_theme_data = wp_get_theme(); // getting current theme data
+	$activate_theme = $activate_theme_data->name;
+		
+	if('InteriorHub' == $activate_theme){
+		$service_area_title = 'WE BUILD CREATIVE INTERIOR DESIGN';
+		$service_area_des = 'Our Services';
+	}elseif('AgencyWP' == $activate_theme){
+		$service_area_title = 'We offer many services to growth';
+		$service_area_des = 'Our Features';
+	}else{	
+		$service_area_title = 'Our Features';
+		$service_area_des = "World's Best Services We Provide To Grow Your Business"; 	
+	}
+	
 		$wp_customize->add_setting( 'aasta_service_area_title',
 		array(
-            'default' => __('Our Features','arile-super'),
+            'default' => __(''.$service_area_title.'','arile-super'),
 			'sanitize_callback' => 'aasta_sanitize_text',
 			'transport' => $selective_refresh,
 		));	
@@ -171,7 +185,7 @@ function arilesuper_aasta_customizer_selective_refresh_settings($wp_customize) {
 		
 		$wp_customize->add_setting( 'aasta_service_area_des',
 		array(
-            'default' => __("World's Best Services We Provide To Grow Your Business",'arile-super'),
+            'default' => __(''.$service_area_des.'','arile-super'),
 			'sanitize_callback' => 'aasta_sanitize_text',
 			'transport' => $selective_refresh,
 		));	
@@ -186,9 +200,20 @@ function arilesuper_aasta_customizer_selective_refresh_settings($wp_customize) {
 	
     // Project
 	
+	if('InteriorHub' == $activate_theme){
+		$project_area_title = 'ALL INTERIOR DESIGN SOLUTIONS';
+		$project_area_des = 'Our Portfolio';
+	}elseif('AgencyWP' == $activate_theme){
+		$project_area_title = 'Our latest works';
+		$project_area_des = 'Our Projects';
+	}else{	
+		$project_area_title = 'Our Projects';
+		$project_area_des = 'Our Latest Works'; 	
+	}
+	
 		$wp_customize->add_setting( 'aasta_project_area_title',
 		array(
-            'default' => __('Our Projects','arile-super'),
+            'default' => __(''.$project_area_title.'','arile-super'),
 			'sanitize_callback' => 'aasta_sanitize_text',
 			'transport' => $selective_refresh,
 		));	
@@ -202,7 +227,7 @@ function arilesuper_aasta_customizer_selective_refresh_settings($wp_customize) {
 			
 		$wp_customize->add_setting( 'aasta_project_area_des',
 		array(
-            'default' => __('Our Latest Works','arile-super'),
+            'default' => __(''.$project_area_des.'','arile-super'),
 			'sanitize_callback' => 'aasta_sanitize_text',
 			'transport' => $selective_refresh,
 		));	
@@ -231,9 +256,20 @@ function arilesuper_aasta_customizer_selective_refresh_settings($wp_customize) {
 
 	// Testimonial
 	
+	if('InteriorHub' == $activate_theme){
+		$testimonial_area_title = 'WHAT OUR CLIENTS SAY ABOUT US';
+		$testimonial_area_des = 'Testimonials';
+	}elseif('AgencyWP' == $activate_theme){
+		$testimonial_area_title = 'Happy clients say';
+		$testimonial_area_des = 'Testimonials';
+	}else{	
+		$testimonial_area_title = 'Our Customer';
+		$testimonial_area_des = 'What Say Our Happy Clients'; 	
+	}
+	
 		$wp_customize->add_setting( 'aasta_testimonial_area_title',
 		array(
-            'default' => __('Our Customer','arile-super'),
+            'default' => __(''.$testimonial_area_title.'','arile-super'),
 			'sanitize_callback' => 'aasta_sanitize_text',
 			'transport' => $selective_refresh,
 		));	
@@ -247,7 +283,7 @@ function arilesuper_aasta_customizer_selective_refresh_settings($wp_customize) {
 			
 		$wp_customize->add_setting( 'aasta_testimonial_area_des',
 		array(
-            'default' => __('What Say Our Happy Clients','arile-super'),
+            'default' => __(''.$testimonial_area_des.'','arile-super'),
 			'sanitize_callback' => 'aasta_sanitize_text',
 			'transport' => $selective_refresh,
 		));	
@@ -262,9 +298,20 @@ function arilesuper_aasta_customizer_selective_refresh_settings($wp_customize) {
 		
 	// Blog
 	
+	if('InteriorHub' == $activate_theme){
+		$blog_area_title = 'OUR LATEST NEWS';
+		$blog_area_des = 'Recent Updates';
+	}elseif('AgencyWP' == $activate_theme){
+		$blog_area_title = 'Our latest news';
+		$blog_area_des = 'Recent Updates';
+	}else{	
+		$blog_area_title = 'Recent Updates';
+		$blog_area_des = 'Our latest news'; 	
+	}
+	
 		$wp_customize->add_setting( 'aasta_blog_area_title',
 		array(
-            'default' => __('Recent Updates','arile-super'),
+            'default' => __(''.$blog_area_title.'','arile-super'),
 			'sanitize_callback' => 'aasta_sanitize_text',
 			'transport' => $selective_refresh,
 		));	
@@ -278,7 +325,7 @@ function arilesuper_aasta_customizer_selective_refresh_settings($wp_customize) {
 
 		$wp_customize->add_setting( 'aasta_blog_area_des',
 		array(
-            'default' => __('Our latest news','arile-super'),
+            'default' => __(''.$blog_area_des.'','arile-super'),
 			'sanitize_callback' => 'aasta_sanitize_text',
 			'transport' => $selective_refresh,
 		));	

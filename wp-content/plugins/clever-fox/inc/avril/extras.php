@@ -1,4 +1,5 @@
 <?php
+$theme = wp_get_theme(); // gets the current theme
 /*
  *
  * Social Icon
@@ -42,52 +43,103 @@ function avril_get_social_icon_default() {
  *
  * Slider Default
  */
- function avril_get_slider_default() {
-	return apply_filters(
-		'avril_get_slider_default', json_encode(
-				 array(
-				array(
-					'image_url'       => CLEVERFOX_PLUGIN_URL .'inc/avril/images/slider/img01.jpg',
-					'title'           => esc_html__( 'Global Project Managment', 'clever-fox' ),
-					'subtitle'         => esc_html__( 'Services & Solutions', 'clever-fox' ),
-					'text'            => esc_html__( 'There are many variations of passages of Lorem Ipsum available but the majority have suffered injected humour dummy now.', 'clever-fox' ),
-					'text2'	  =>  esc_html__( 'Get Started', 'clever-fox' ),
-					'link'	  =>  esc_html__( '#', 'clever-fox' ),
-					'button_second'	  =>  esc_html__( 'Read More', 'clever-fox' ),
-					'link2'	  =>  esc_html__( '#', 'clever-fox' ),
-					"slide_align" => "left", 
-					'id'              => 'customizer_repeater_slider_001',
-				),
-				array(
-					'image_url'       => CLEVERFOX_PLUGIN_URL .'inc/avril/images/slider/img02.jpg',
-					'title'           => esc_html__( 'Develop Stronger Minds', 'clever-fox' ),
-					'subtitle'         => esc_html__( 'Better Coaching Gets', 'clever-fox' ),
-					'text'            => esc_html__( 'There are many variations of passages of Lorem Ipsum available but the majority have suffered injected humour dummy now.', 'clever-fox' ),
-					'text2'	  =>  esc_html__( 'Get Started', 'clever-fox' ),
-					'link'	  =>  esc_html__( '#', 'clever-fox' ),
-					'button_second'	  =>  esc_html__( 'Read More', 'clever-fox' ),
-					'link2'	  =>  esc_html__( '#', 'clever-fox' ),
-					"slide_align" => "center", 
-					'id'              => 'customizer_repeater_slider_002',
-				),
-				array(
-					'image_url'       => CLEVERFOX_PLUGIN_URL .'inc/avril/images/slider/img03.jpg',
-					'title'           => esc_html__( 'Industry Analysis', 'clever-fox' ),
-					'subtitle'         => esc_html__( 'Marketing & Strategy', 'clever-fox' ),
-					'text'            => esc_html__( 'There are many variations of passages of Lorem Ipsum available but the majority have suffered injected humour dummy now.', 'clever-fox' ),
-					'text2'	  =>  esc_html__( 'Get Started', 'clever-fox' ),
-					'link'	  =>  esc_html__( '#', 'clever-fox' ),
-					'button_second'	  =>  esc_html__( 'Read More', 'clever-fox' ),
-					'link2'	  =>  esc_html__( '#', 'clever-fox' ),
-					"slide_align" => "right", 
-					'id'              => 'customizer_repeater_slider_003',
-			
-				),
+ 
+ if( 'Avitech' == $theme->name){
+	 function avril_get_slider_default() {
+		return apply_filters(
+			'avril_get_slider_default', json_encode(
+					 array(
+					array(
+						'image_url'       => CLEVERFOX_PLUGIN_URL .'inc/avril/images/slider/img02.jpg',
+						"image_url2" => CLEVERFOX_PLUGIN_URL .'inc/azwa/images/sliders/slider01.png',
+						'title'           => esc_html__( 'Global Project Managment', 'clever-fox' ),
+						'subtitle'         => esc_html__( 'Services & Solutions', 'clever-fox' ),
+						'text'            => esc_html__( 'There are many variations of passages of Lorem Ipsum available but the majority have suffered injected humour dummy now.', 'clever-fox' ),
+						'text2'	  =>  esc_html__( 'Get Started', 'clever-fox' ),
+						'link'	  =>  esc_html__( '#', 'clever-fox' ),
+						'button_second'	  =>  esc_html__( 'Read More', 'clever-fox' ),
+						'link2'	  =>  esc_html__( '#', 'clever-fox' ),
+						"slide_align" => "left", 
+						'id'              => 'customizer_repeater_slider_001',
+					),
+					array(
+						'image_url'       => CLEVERFOX_PLUGIN_URL .'inc/avril/images/slider/img02.jpg',
+						"image_url2" => CLEVERFOX_PLUGIN_URL .'inc/azwa/images/sliders/slider03.png',
+						'title'           => esc_html__( 'Develop Stronger Minds', 'clever-fox' ),
+						'subtitle'         => esc_html__( 'Better Coaching Gets', 'clever-fox' ),
+						'text'            => esc_html__( 'There are many variations of passages of Lorem Ipsum available but the majority have suffered injected humour dummy now.', 'clever-fox' ),
+						'text2'	  =>  esc_html__( 'Get Started', 'clever-fox' ),
+						'link'	  =>  esc_html__( '#', 'clever-fox' ),
+						'button_second'	  =>  esc_html__( 'Read More', 'clever-fox' ),
+						'link2'	  =>  esc_html__( '#', 'clever-fox' ),
+						"slide_align" => "right", 
+						'id'              => 'customizer_repeater_slider_002',
+					),
+					array(
+						'image_url'       => CLEVERFOX_PLUGIN_URL .'inc/avril/images/slider/img02.jpg',
+						"image_url2" => CLEVERFOX_PLUGIN_URL .'inc/azwa/images/sliders/slider01.png',
+						'title'           => esc_html__( 'Industry Analysis', 'clever-fox' ),
+						'subtitle'         => esc_html__( 'Marketing & Strategy', 'clever-fox' ),
+						'text'            => esc_html__( 'There are many variations of passages of Lorem Ipsum available but the majority have suffered injected humour dummy now.', 'clever-fox' ),
+						'text2'	  =>  esc_html__( 'Get Started', 'clever-fox' ),
+						'link'	  =>  esc_html__( '#', 'clever-fox' ),
+						'button_second'	  =>  esc_html__( 'Read More', 'clever-fox' ),
+						'link2'	  =>  esc_html__( '#', 'clever-fox' ),
+						"slide_align" => "left", 
+						'id'              => 'customizer_repeater_slider_003',
+				
+					),
+				)
 			)
-		)
-	);
+		);
+	}
+ }else{
+	 function avril_get_slider_default() {
+		return apply_filters(
+			'avril_get_slider_default', json_encode(
+					 array(
+					array(
+						'image_url'       => CLEVERFOX_PLUGIN_URL .'inc/avril/images/slider/img01.jpg',
+						'title'           => esc_html__( 'Global Project Managment', 'clever-fox' ),
+						'subtitle'         => esc_html__( 'Services & Solutions', 'clever-fox' ),
+						'text'            => esc_html__( 'There are many variations of passages of Lorem Ipsum available but the majority have suffered injected humour dummy now.', 'clever-fox' ),
+						'text2'	  =>  esc_html__( 'Get Started', 'clever-fox' ),
+						'link'	  =>  esc_html__( '#', 'clever-fox' ),
+						'button_second'	  =>  esc_html__( 'Read More', 'clever-fox' ),
+						'link2'	  =>  esc_html__( '#', 'clever-fox' ),
+						"slide_align" => "left", 
+						'id'              => 'customizer_repeater_slider_001',
+					),
+					array(
+						'image_url'       => CLEVERFOX_PLUGIN_URL .'inc/avril/images/slider/img02.jpg',
+						'title'           => esc_html__( 'Develop Stronger Minds', 'clever-fox' ),
+						'subtitle'         => esc_html__( 'Better Coaching Gets', 'clever-fox' ),
+						'text'            => esc_html__( 'There are many variations of passages of Lorem Ipsum available but the majority have suffered injected humour dummy now.', 'clever-fox' ),
+						'text2'	  =>  esc_html__( 'Get Started', 'clever-fox' ),
+						'link'	  =>  esc_html__( '#', 'clever-fox' ),
+						'button_second'	  =>  esc_html__( 'Read More', 'clever-fox' ),
+						'link2'	  =>  esc_html__( '#', 'clever-fox' ),
+						"slide_align" => "center", 
+						'id'              => 'customizer_repeater_slider_002',
+					),
+					array(
+						'image_url'       => CLEVERFOX_PLUGIN_URL .'inc/avril/images/slider/img03.jpg',
+						'title'           => esc_html__( 'Industry Analysis', 'clever-fox' ),
+						'subtitle'         => esc_html__( 'Marketing & Strategy', 'clever-fox' ),
+						'text'            => esc_html__( 'There are many variations of passages of Lorem Ipsum available but the majority have suffered injected humour dummy now.', 'clever-fox' ),
+						'text2'	  =>  esc_html__( 'Get Started', 'clever-fox' ),
+						'link'	  =>  esc_html__( '#', 'clever-fox' ),
+						'button_second'	  =>  esc_html__( 'Read More', 'clever-fox' ),
+						'link2'	  =>  esc_html__( '#', 'clever-fox' ),
+						"slide_align" => "right", 
+						'id'              => 'customizer_repeater_slider_003',
+				
+					),
+				)
+			)
+		);
+	}
 }
-
 
 /*
  *

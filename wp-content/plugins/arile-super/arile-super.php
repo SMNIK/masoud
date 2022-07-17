@@ -3,7 +3,7 @@
 * Plugin Name:       	Arile Super
 * Plugin URI:        	https://themearile.com/aasta-theme/
 * Description:       	Arile Super Enhances ThemeArile with additional functionality.
-* Version:           	0.3
+* Version:           	0.4
 * Author: 				ThemeArile
 * Author URI: 			https://themearile.com/
 * Tested up to: 		6.0
@@ -25,7 +25,7 @@ if( !function_exists('arile_super_init') ){
 		$activate_theme_data = wp_get_theme(); // getting current theme data
 		$activate_theme = $activate_theme_data->name;
 		
-		if( 'Aasta' == $activate_theme || 'Aasta Light' == $activate_theme){
+		if( 'Aasta' == $activate_theme || 'Aasta Light' == $activate_theme || 'InteriorHub' == $activate_theme || 'AgencyWP' == $activate_theme){
 			require("inc/aasta/aasta.php");
 		}
 	}

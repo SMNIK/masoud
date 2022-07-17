@@ -76,6 +76,10 @@ $selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' :
 			?>	
 				<a class="customizer_slider_upgrade_section up-to-pro" href="https://www.nayrathemes.com/avail-pro/" target="_blank" style="display: none;"><?php _e('Upgrade to Pro','avail'); ?></a>
 			<?php
+				}elseif ( 'Avitech' == $theme->name){
+			?>	
+				<a class="customizer_slider_upgrade_section up-to-pro" href="https://www.nayrathemes.com/avril-pro/" target="_blank" style="display: none;"><?php _e('Upgrade to Pro','avail'); ?></a>	
+			<?php
 				}
 			}
 		}
@@ -97,11 +101,18 @@ $selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' :
 		);
 		
 	// slider opacity
+	$theme = wp_get_theme(); // gets the current theme
+	if ( 'Avitech' == $theme->name){
+		$default_opacity=0.8;
+	}else{
+		$default_opacity=0.5;
+	}	
+	
 	if ( class_exists( 'Cleverfox_Customizer_Range_Slider_Control' ) ) {
 		$wp_customize->add_setting(
 			'slider_opacity',
 			array(
-				'default'	      => '0.5',
+				'default'	      => $default_opacity,
 				'capability'     	=> 'edit_theme_options',
 				//'sanitize_callback' => 'avril_sanitize_range_value',
 				'priority' => 7,

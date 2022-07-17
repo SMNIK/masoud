@@ -1,7 +1,16 @@
 <?php 
 $aasta_blog_disabled = get_theme_mod('aasta_blog_disabled', true); 
+if('InteriorHub' == $activate_theme){
+$aasta_blog_area_title = get_theme_mod('aasta_blog_area_title', __('OUR LATEST NEWS','arile-super'));
+$aasta_blog_area_des = get_theme_mod('aasta_blog_area_des', __('Recent Updates','arile-super'));
+}elseif('AgencyWP' == $activate_theme){
+$aasta_blog_area_title = get_theme_mod('aasta_blog_area_title', __('Our latest news','arile-super'));
+$aasta_blog_area_des = get_theme_mod('aasta_blog_area_des', __('Recent Updates','arile-super'));
+}
+else{
 $aasta_blog_area_title = get_theme_mod('aasta_blog_area_title', __('Recent Updates','arile-super'));
 $aasta_blog_area_des = get_theme_mod('aasta_blog_area_des', __('Our latest news','arile-super'));
+}
 $aasta_home_blog_meta_disabled = get_theme_mod('aasta_home_blog_meta_disabled', true);
 $aasta_blog_front_container_size = get_theme_mod('aasta_blog_front_container_size', 'container'); 
 $aasta_theme_blog_category = get_theme_mod('aasta_theme_blog_category');
@@ -33,8 +42,7 @@ if($aasta_blog_disabled == true): ?>
 			{	
 				while(have_posts()):the_post();
 				{ ?>
-					<div class="col-lg-6 col-sm-12">
-						
+					<div class="col-lg-<?php if($activate_theme == 'InteriorHub') { echo '4'; } else { echo '6';}   ?> col-md-6 col-sm-12">
 					    <article class="post wow animate fadeInUp" data-wow-delay=".3s">
                         <?php if(has_post_thumbnail()): ?>						
 							<figure class="post-thumbnail">

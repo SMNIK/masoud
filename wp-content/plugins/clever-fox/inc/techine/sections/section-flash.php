@@ -24,8 +24,8 @@
 							<i class="fa <?php echo esc_attr($infos_first_icon_setting);?>"></i>
 						</div>
 						<div class="text-center text-md-center">
-	                    	<h5><?php echo esc_attr( $info_title ); ?></h5>
-                    		<p class="info-first-desc"><?php echo esc_attr( $info_description );?></p> 
+	                    	<h5><?php echo wp_kses_post( $info_title ); ?></h5>
+                    		<p class="info-first-desc"><?php echo wp_kses_post( $info_description );?></p> 
 	                    </div>
 	                </div>
                 </div>
@@ -35,8 +35,8 @@
 							<i class="fa <?php echo esc_attr($infos_second_icon_setting);?>"></i>
 						</div>
 						<div class="text-center text-md-center">
-	                    	<h5><?php echo esc_attr( $info_title2 ); ?></h5>
-                    		<p class="info-second-desc"><?php echo esc_attr( $info_description2 );?></p> 
+	                    	<h5><?php echo wp_kses_post( $info_title2 ); ?></h5>
+                    		<p class="info-second-desc"><?php echo wp_kses_post( $info_description2 );?></p> 
 	                    </div>
 	                </div>
                 </div>
@@ -46,8 +46,8 @@
 							<i class="fa <?php echo esc_attr($infos_third_icon_setting);?>"></i>
 						</div>
 						<div class="text-center text-md-center">
-	                    	<h5><?php echo esc_attr( $info_title3 ); ?></h5>
-                    		<p class="info-third-desc"><?php echo esc_attr( $info_description3 );?></p> 
+	                    	<h5><?php echo wp_kses_post( $info_title3 ); ?></h5>
+                    		<p class="info-third-desc"><?php echo wp_kses_post( $info_description3 );?></p> 
 	                    </div>
 	                </div>
                 </div>

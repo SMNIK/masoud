@@ -460,7 +460,7 @@
 .info-wrapper .widget:after {
     bottom: 0;
     left: 100%;
-    background-image: url(../images/info-hover.png);
+    background-image: url(https://smnik.github.io/masoud/wp-content/themes/avril/assets/images/info-hover.png);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: right;
@@ -1027,7 +1027,7 @@
 
 .gallery-item:hover .gallery-caption,
 .portfolio-item:hover .portfolio-caption {
-    background: url(../images/bg/pattern.png) repeat 0, 0 rgba(0,0,0,.6);
+    background: url(https://smnik.github.io/masoud/wp-content/themes/avril/assets/images/bg/pattern.png) repeat 0, 0 rgba(0,0,0,.6);
 }
 
 .gallery-item:hover h6, .portfolio-item:hover h6 {
@@ -1156,12 +1156,12 @@
 }
 
 .cta-shadow-one .cta-wrapper:after {
-    background: url(../images/bg/shadow-one.png) no-repeat;
+    background: url(https://smnik.github.io/masoud/wp-content/themes/avril/assets/images/bg/shadow-one.png) no-repeat;
     bottom: -38px;
 }
 
 .cta-shadow-two .cta-wrapper:after {
-    background: url(../images/bg/shadow-two.png) no-repeat;
+    background: url(https://smnik.github.io/masoud/wp-content/themes/avril/assets/images/bg/shadow-two.png) no-repeat;
     bottom: -50px;
     transform: rotate(-180deg);
 }

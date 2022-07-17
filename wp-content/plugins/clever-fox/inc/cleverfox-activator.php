@@ -112,6 +112,12 @@ class Cleverfox_Activator {
 				require CLEVERFOX_PLUGIN_DIR . 'inc/aviser/default-widgets/default-widget.php';
 			}
 			
+			if ( 'Avitech' == $theme->name){
+				require CLEVERFOX_PLUGIN_DIR . 'inc/avitech/default-pages/upload-media.php';
+				require CLEVERFOX_PLUGIN_DIR . 'inc/avitech/default-pages/home-page.php';
+				require CLEVERFOX_PLUGIN_DIR . 'inc/avitech/default-widgets/default-widget.php';
+			}
+			
 			if ( 'Fiona Blog' == $theme->name || 'Fiona Food' == $theme->name || 'Fiona News' == $theme->name){
 				require CLEVERFOX_PLUGIN_DIR . 'inc/fiona-blog/default-pages/upload-media.php';
 				require CLEVERFOX_PLUGIN_DIR . 'inc/fiona-blog/default-pages/home-page.php';

@@ -37,7 +37,61 @@ if ( ! function_exists( 'arilesuper_aasta_main_slider_default_content' ) ) :
 						),		
 					   )
 					);
-				}else{
+				}elseif('InteriorHub' == $activate_theme){
+					
+					$aasta_main_slider_data->default = json_encode( array(
+						array(
+						'title'      => esc_html__( 'BEST INTERIOR DESIGN', 'arile-super' ),
+						'subtitle'       => esc_html__( 'STYLE & COMFORT', 'arile-super' ),
+						'text'       => esc_html__( 'We provide all types of interior and architecture design services such as exterior design, kitchen design, room design, furniture design, light design, etc. With the help of which you can build your dream home.', 'arile-super' ),
+						'button_text'      => __('Check it out','arile-super'),
+						'link'       => '#',
+						'image_url'  => arile_super_plugin_url .'/inc/aasta/images/theme-slide4.jpg',
+						'open_new_tab' => 'no',
+						'id'         => 'customizer_repeater_56d7ea7f40b10',				
+						),
+						array(
+						'title'      => esc_html__( 'INNOVATE YOUR HOME', 'arile-super' ),
+						'subtitle'       => esc_html__( 'HOME DECOR', 'arile-super' ),
+						'text'       => esc_html__( 'We provide all types of interior and architecture design services such as exterior design, kitchen design, room design, furniture design, light design, etc. With the help of which you can build your dream home.', 'arile-super' ),
+						'button_text'      => __('Check it out','arile-super'),
+						'link'       => '#',
+						'image_url'  => arile_super_plugin_url .'/inc/aasta/images/theme-slide5.jpg',
+						'open_new_tab' => 'no',
+						'id'         => 'customizer_repeater_56d7ea7f40b14',
+						),		
+					   )
+					);
+					
+				}elseif('AgencyWP' == $activate_theme){
+					
+					$aasta_main_slider_data->default = json_encode( array(
+						array(
+						'title'      => esc_html__( 'Business grow online', 'arile-super' ),
+						'subtitle'       => esc_html__( 'Best business goals', 'arile-super' ),
+						'text'       => esc_html__( 'AgencyWP is a most popular Multipurpose WordPress themes in the world. The designs are clean, modern, and feature strong default colors that inspire confidence.', 'arile-super' ),
+						'button_text'      => __('Check it out','arile-super'),
+						'link'       => '#',
+						'image_url'  => arile_super_plugin_url .'/inc/aasta/images/theme-slide6.jpg',
+						'open_new_tab' => 'no',
+						'id'         => 'customizer_repeater_56d7ea7f40b10',				
+						),
+						array(
+						'title'      => esc_html__( 'A world of opportunities', 'arile-super' ),
+						'subtitle'       => esc_html__( 'Criteria for success', 'arile-super' ),
+						'text'       => esc_html__( 'AgencyWP is a most popular Multipurpose WordPress themes in the world. The designs are clean, modern, and feature strong default colors that inspire confidence.', 'arile-super' ),
+						'button_text'      => __('Check it out','arile-super'),
+						'link'       => '#',
+						'image_url'  => arile_super_plugin_url .'/inc/aasta/images/theme-slide7.jpg',
+						'open_new_tab' => 'no',
+						'id'         => 'customizer_repeater_56d7ea7f40b14',
+						),		
+					   )
+					);
+					
+				}
+				
+				else{
 					
 					$aasta_main_slider_data->default = json_encode( array(
 						array(
@@ -73,7 +127,79 @@ endif;
 if ( ! function_exists( 'arilesuper_aasta_service_default_content' ) ) :		
     function arilesuper_aasta_service_default_content( $wp_customize ){
 			$aasta_service_data = $wp_customize->get_setting( 'aasta_service_content' );
-				if ( ! empty( $aasta_service_data ) ) {	
+			$activate_theme_data = wp_get_theme(); // getting current theme data
+			$activate_theme = $activate_theme_data->name;
+				if ( ! empty( $aasta_service_data ) ) {
+                   if('InteriorHub' == $activate_theme){					
+					$aasta_service_data->default = json_encode( array(
+						array(
+						'icon_value' => 'fa-laptop',
+						'title'      => esc_html__( 'INTERIOR DESIGN', 'arile-super' ),
+						'text'       => 'Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been standard dummy.',
+						'choice'    => 'customizer_repeater_image',
+						'image_url'  => arile_super_plugin_url .'/inc/aasta/images/theme-service4.jpg',
+						'link'       => '#',
+						'open_new_tab' => 'no',
+						'id'         => 'customizer_repeater_56d7ea7f40b15',
+						),
+						array(
+						'icon_value' => 'fa fa-opencart',
+						'title'      => esc_html__( 'ARCHITECTURAL DESIGN', 'arile-super' ),
+						'text'       => 'Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been standard dummy.',
+						'choice'    => 'customizer_repeater_image',
+						'image_url'  => arile_super_plugin_url .'/inc/aasta/images/theme-service5.jpg',
+						'link'       => '#',
+						'open_new_tab' => 'no',
+						'id'         => 'customizer_repeater_56d7ea7f40b16',
+						),
+						array(
+						'icon_value' => 'fa fa-users',
+						'title'      => esc_html__( 'EXTERIOR DESIGN', 'arile-super' ),
+						'text'       => 'Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been standard dummy.',
+						'choice'    => 'customizer_repeater_image',
+						'image_url'  => arile_super_plugin_url .'/inc/aasta/images/theme-service6.jpg',
+						'link'       => '#',
+						'open_new_tab' => 'no',
+						'id'         => 'customizer_repeater_56d7ea7f40b17',
+						),
+						
+					) );
+				}elseif('AgencyWP' == $activate_theme){
+					$aasta_service_data->default = json_encode( array(
+						array(
+						'icon_value' => 'fa fa-globe',
+						'title'      => esc_html__( 'SEO Friendly', 'arile-super' ),
+						'text'       => 'Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been standard dummy.',
+						'choice'    => 'customizer_repeater_icon',
+						'image_url'  => arile_super_plugin_url .'/inc/aasta/images/theme-service1.jpg',
+						'link'       => '#',
+						'open_new_tab' => 'no',
+						'id'         => 'customizer_repeater_56d7ea7f40b15',
+						),
+						array(
+						'icon_value' => 'fa fa-language',
+						'title'      => esc_html__( 'Translation', 'arile-super' ),
+						'text'       => 'Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been standard dummy.',
+						'choice'    => 'customizer_repeater_icon',
+						'image_url'  => arile_super_plugin_url .'/inc/aasta/images/theme-service2.jpg',
+						'link'       => '#',
+						'open_new_tab' => 'no',
+						'id'         => 'customizer_repeater_56d7ea7f40b16',
+						),
+						array(
+						'icon_value' => 'fa fa-mobile',
+						'title'      => esc_html__( 'Creative Design', 'arile-super' ),
+						'text'       => 'Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been standard dummy.',
+						'choice'    => 'customizer_repeater_icon',
+						'image_url'  => arile_super_plugin_url .'/inc/aasta/images/theme-service3.jpg',
+						'link'       => '#',
+						'open_new_tab' => 'no',
+						'id'         => 'customizer_repeater_56d7ea7f40b17',
+						),
+						
+					) );	
+				
+				}else{
 					$aasta_service_data->default = json_encode( array(
 						array(
 						'icon_value' => 'fa-laptop',
@@ -106,7 +232,8 @@ if ( ! function_exists( 'arilesuper_aasta_service_default_content' ) ) :
 						'id'         => 'customizer_repeater_56d7ea7f40b17',
 						),
 						
-					) );
+					) );	
+				}	
 				}
 	    }
 add_action( 'customize_register', 'arilesuper_aasta_service_default_content' );
@@ -115,8 +242,69 @@ endif;
 /* Project content  */
 if ( ! function_exists( 'arilesuper_aasta_project_default_content' ) ) :		
 	function arilesuper_aasta_project_default_content( $wp_customize ){
+			$aasta_service_data = $wp_customize->get_setting( 'aasta_service_content' );
+			$activate_theme_data = wp_get_theme(); // getting current theme data
+			$activate_theme = $activate_theme_data->name;
 			$aasta_project_data = $wp_customize->get_setting( 'aasta_project_content' );
-					if ( ! empty( $aasta_project_data ) ) { 	
+			if ( ! empty( $aasta_project_data ) ) {
+                if('InteriorHub' == $activate_theme){							
+					$aasta_project_data->default = json_encode( array(
+						array(
+						'image_url'  => arile_super_plugin_url .'/inc/aasta/images/theme-project4.jpg',
+						'title'      => __('BEDROOM LIGHTING DÉCOR','arile-super'),
+						'text'       => __('','arile-super'),	
+						'id'         => 'customizer_repeater_56d7ea7f40b30',
+						),
+						array(
+						'image_url'  => arile_super_plugin_url .'/inc/aasta/images/theme-project5.jpg',
+						'title'      => __('EXTERIOR RENOVATION','arile-super'),
+						'text'       => __('','arile-super'),
+						'id'         => 'customizer_repeater_56d7ea7f40b31',
+						),
+						array(
+						'image_url'  => arile_super_plugin_url .'/inc/aasta/images/theme-project6.jpg',
+						'title'      => __('ARCHITECTURE DESIGN','arile-super'),
+						'text'       => __('','arile-super'),
+						'id'         => 'customizer_repeater_56d7ea7f40b71',
+						),
+					    array(
+						'image_url'  => arile_super_plugin_url .'/inc/aasta/images/theme-project7.jpg',
+						'title'      => __('MODULAR KITCHEN DESIGN','arile-super'),
+						'text'       => __('','arile-super'),
+						'id'         => 'customizer_repeater_56d7ea7f40b71',
+						),
+						
+					) );
+				}elseif('AgencyWP' == $activate_theme){
+					$aasta_project_data->default = json_encode( array(
+						array(
+						'image_url'  => arile_super_plugin_url .'/inc/aasta/images/theme-project1.jpg',
+						'title'      => __('StartUp Business','arile-super'),
+						'text'       => __('','arile-super'),	
+						'id'         => 'customizer_repeater_56d7ea7f40b30',
+						),
+						array(
+						'image_url'  => arile_super_plugin_url .'/inc/aasta/images/theme-project2.jpg',
+						'title'      => __('Market Expansion','arile-super'),
+						'text'       => __('','arile-super'),
+						'id'         => 'customizer_repeater_56d7ea7f40b31',
+						),
+						array(
+						'image_url'  => arile_super_plugin_url .'/inc/aasta/images/theme-project3.jpg',
+						'title'      => __('Data Analytics','arile-super'),
+						'text'       => __('','arile-super'),
+						'id'         => 'customizer_repeater_56d7ea7f40b71',
+						),
+						array(
+						'image_url'  => arile_super_plugin_url .'/inc/aasta/images/theme-project8.jpg',
+						'title'      => __('Internet marketing','arile-super'),
+						'text'       => __('','arile-super'),
+						'id'         => 'customizer_repeater_56d7ea7f40b71',
+						),
+						
+					) );
+				
+				}else{
 					$aasta_project_data->default = json_encode( array(
 						array(
 						'image_url'  => arile_super_plugin_url .'/inc/aasta/images/theme-project1.jpg',
@@ -137,8 +325,8 @@ if ( ! function_exists( 'arilesuper_aasta_project_default_content' ) ) :
 						'id'         => 'customizer_repeater_56d7ea7f40b71',
 						),
 						
-					) );	
-					
+					) );
+				}						
 				}
         }
 add_action( 'customize_register', 'arilesuper_aasta_project_default_content' );
